@@ -1,0 +1,159 @@
+<style>
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .img-logo {
+        width: 145px;
+        height: 25px;
+    }
+
+    .img-hamburger {
+        width: 25px;
+        height: 15px;
+        cursor: pointer;
+    }
+
+    .img-close {
+        display: none;
+        width: 25px;
+        height: 15px;
+        cursor: pointer;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--black);
+        z-index: 1;
+        height: 100vh;
+    }
+
+    .img-logo-nav {
+        width: 145px;
+        height: 25px;
+        margin-top: 200px;
+
+    }
+
+    nav a {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+        height: 100%;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        font-family: var(--ff-alata);
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    #nav-toggle {
+        display: none;
+    }
+
+    .toggle {
+        z-index: 2;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-right: 25px;
+    }
+
+    .logo-container,
+    .toggle {
+        margin-top: 40px;
+    }
+
+    .logo-container {
+        margin-left: 25px;
+    }
+
+    #nav-toggle:checked ~ nav {
+        display: block;
+    }
+
+    #nav-toggle:checked ~ label .img-hamburger {
+        display: none;
+    }
+
+    #nav-toggle:checked ~ label .img-close {
+        display: block;
+    }
+</style>
+
+<section class="header">
+    <div class="container">
+        <a href="/loopstudios-landing-page/" class="logo-container">
+            <img
+                src="/loopstudios-landing-page/images/logo.svg"
+                alt=""
+                class="img-logo"
+            />
+        </a>
+
+        <input type="checkbox" id="nav-toggle" />
+
+        <label for="nav-toggle" class="toggle">
+            <img
+                src="/loopstudios-landing-page/images/icons/hamburger.svg"
+                alt=""
+                class="img-hamburger"
+            />
+            <img
+                src="/loopstudios-landing-page/images/icons/close.svg"
+                alt=""
+                class="img-close"
+            />
+        </label>
+
+        <nav>
+            <a href="/loopstudios-landing-page/">
+                <img
+                    src="/loopstudios-landing-page/images/logo.svg"
+                    alt=""
+                    class="img-logo-nav"
+                />
+            </a>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
