@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/rafopm/loopstudios-landing-page)
-- Live Site URL: [Add live site URL here](https://loopstudios-page-landing.netlify.app/)
+- Live Site URL: [Add live site URL here](https://rafopm.github.io/loopstudios-landing-page/)
 
 ## My process
 
