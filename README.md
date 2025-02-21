@@ -27,13 +27,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot](/images/screenshot.jpeg)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/rafopm/loopstudios-landing-page)
-- Live Site URL: [Add live site URL here](https://rafopm.github.io/loopstudios-landing-page/)
+- Solution URL: [Ver](https://github.com/rafopm/loopstudios-landing-page)
+- Live Site URL: [Ver](https://rafopm.github.io/loopstudios-landing-page/)
 
 ## My process
 
@@ -42,7 +42,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [Astro](https://astro.build/) - JS library
 
@@ -50,22 +49,72 @@ Users should be able to:
 
 
 ```html
-<h1> </h1>
+<div class="cards-container">
+        {
+            cards.map((card) => (
+                <div class="card">
+                    <img
+                        src={card.img}
+                        srcset={`${card.img} 400w, ${card.img} 750w,${card.imgdesktop} 1440w`}
+                        alt={card.alt}
+                    />
+                    <span>{card.title}</span>
+                </div>
+            ))
+        }
+        <button>See all</button>
+    </div>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        max-width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+    }
+
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+        z-index: 1;
+    }
+
+    .card span {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: var(--white);
+        font-size: 24px;
+        font-family: var(--ff-josefin);
+        font-weight: 300;
+        z-index: 2;
+        text-transform: uppercase;
+        text-align: left;
+        width: 130px;
+    }
 ```
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
+- Website - [Rafael Pampavilca](https://rafopm.netlify.app/)
+- Frontend Mentor - [@rafopm](https://www.frontendmentor.io/profile/rafopm)
