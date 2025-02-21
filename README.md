@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](/images/screenshot.jpeg)
+![screenshot](https://github.com/user-attachments/assets/15245f3e-74ed-48b0-9d47-20fe68e07241)
 
 
 ### Links
