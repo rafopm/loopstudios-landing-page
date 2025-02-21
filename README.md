@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Ver](https://github.com/rafopm/loopstudios-landing-page)
-- Live Site URL: [Ver](https://rafopm.github.io/loopstudios-landing-page/)
+- Solution URL: [Go](https://github.com/rafopm/loopstudios-landing-page)
+- Live Site URL: [Go](https://rafopm.github.io/loopstudios-landing-page/)
 
 ## My process
 
