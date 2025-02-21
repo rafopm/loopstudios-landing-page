@@ -1,0 +1,110 @@
+<style>
+    section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        max-width: 100%;
+        padding: 0 25px;
+        margin: 100px auto 0;
+        overflow: hidden;
+    }
+
+    img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-family: var(--ff-josefin);
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 25px;
+        margin: 10px 25px;
+        font-family: var(--ff-alata);
+        color: var(--dark-gray);
+    }
+
+    @media (min-width: 1024px) {
+        section {
+            flex-direction: row;
+            max-width: 1110px;
+            margin: 160px auto 0;
+            padding: 0;
+        }
+
+        img {
+            width: 730px;
+            height: 100%;
+            border: 1px solid white;
+            margin: 0;
+        }
+
+        .text-container {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 540px;
+            height: 320px;
+            background-color: var(--white);
+            border: 1px;
+            bottom: 0px;
+            right: 0;
+            z-index: 1;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: left;
+            margin: 0;
+            margin-right: 0px;
+            margin-left: 95px;
+            margin-top: 95px;
+            margin-bottom: 20px;
+            font-size: 48px;
+        }
+
+        p {
+            text-align: left;
+            margin: 0;
+            margin-right: 0px;
+            margin-left: 95px;
+            margin-bottom: 0px;
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+</style>
+
+<section>
+    <img
+        src="/loopstudios-landing-page/images/gallery/mobile/image-interactive.jpg"
+        srcset="
+            /loopstudios-landing-page/images/gallery/mobile/image-interactive.jpg 400w,
+            /loopstudios-landing-page/images/gallery/mobile/image-interactive.jpg 750w,
+            /loopstudios-landing-page/images/gallery/desktop/image-interactive.jpg 1440w
+        "
+        alt="Image of a person with a VR headset"
+    />
+    <div class="text-container">
+        <h2>THE LEADER IN INTERACTIVE VR</h2>
+        <p>
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+        </p>
+    </div>
+</section>

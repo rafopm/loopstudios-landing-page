@@ -1,0 +1,224 @@
+---
+const cards = [
+    {
+        img: "/loopstudios-landing-page/images/gallery/mobile/image-deep-earth.jpg",
+        imgdesktop:
+            "/loopstudios-landing-page/images/gallery/desktop/image-deep-earth.jpg",
+        alt: "Deep earth",
+        title: "Deep earth",
+    },
+    {
+        img: "/loopstudios-landing-page/images/gallery/mobile/image-night-arcade.jpg",
+        imgdesktop:
+            "/loopstudios-landing-page/images/gallery/desktop/image-night-arcade.jpg",
+        alt: "Night arcade",
+        title: "Night arcade",
+    },
+    {
+        img: "/loopstudios-landing-page/images/gallery/mobile/image-soccer-team.jpg",
+        imgdesktop:
+            "/loopstudios-landing-page/images/gallery/desktop/image-soccer-team.jpg",
+        alt: "Soccer team VR",
+        title: "Soccer team VR",
+    },
+    {
+        img: "/loopstudios-landing-page/images/gallery/mobile/image-grid.jpg",
+        imgdesktop:
+            "/loopstudios-landing-page/images/gallery/desktop/image-grid.jpg",
+        alt: "The grid",
+        title: "The grid",
+    },
+    {
+        img: "/loopstudios-landing-page/images/gallery/mobile/image-from-above.jpg",
+        imgdesktop:
+            "/loopstudios-landing-page/images/gallery/desktop/image-from-above.jpg",
+        alt: "From up above VR",
+        title: "From up above VR",
+    },
+    {
+        img: "/loopstudios-landing-page/images/gallery/mobile/image-pocket-borealis.jpg",
+        imgdesktop:
+            "/loopstudios-landing-page/images/gallery/desktop/image-pocket-borealis.jpg",
+        alt: "Pocket borealis",
+        title: "Pocket borealis",
+    },
+    {
+        img: "/loopstudios-landing-page/images/gallery/mobile/image-curiosity.jpg",
+        imgdesktop:
+            "/loopstudios-landing-page/images/gallery/desktop/image-curiosity.jpg",
+        alt: "The curiosity",
+        title: "The curiosity",
+    },
+    {
+        img: "/loopstudios-landing-page/images/gallery/mobile/image-fisheye.jpg",
+        imgdesktop:
+            "/loopstudios-landing-page/images/gallery/desktop/image-fisheye.jpg",
+        alt: "Make it fisheye",
+        title: "Make it fisheye",
+    },
+];
+---
+
+<style>
+    .our-creations {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        max-width: 100%;
+        padding: 0 25px;
+        margin: 80px auto 0;
+        overflow: hidden;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-family: var(--ff-josefin);
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        max-width: 100%;
+        padding: 0;
+        margin: 40px auto 0;
+        overflow: hidden;
+        gap: 20px;
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        max-width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+    }
+
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+        z-index: 1;
+    }
+
+    .card span {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: var(--white);
+        font-size: 24px;
+        font-family: var(--ff-josefin);
+        font-weight: 300;
+        z-index: 2;
+        text-transform: uppercase;
+        text-align: left;
+        width: 130px;
+    }
+
+    button {
+        margin: 20px auto;
+        border-radius: 0;
+        text-transform: uppercase;
+        font-family: var(--ff-alata);
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 5px;
+        color: var(--black);
+        width: 160px;
+        height: 40px;
+        border: 1px solid var(--black);
+        background-color: var(--white);
+        cursor: pointer;
+    }
+
+    @media (min-width: 1024px) {
+        .our-creations {
+            max-width: 1110px;
+            margin: 160px auto 0;
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 48px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .cards-container {
+            flex-direction: row;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 255px;
+            height: 450px;
+        }
+
+        .card::before {
+            width: 100%;
+        }
+
+        .card span {
+            font-size: 32px;
+            width: 180px;
+            bottom: 40px;
+            left: 40px;
+        }
+
+        .card img {
+            width: 255px;
+            height: 450px;
+        }
+
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+</style>
+<section class="our-creations">
+    <h2>OUR CREATIONS</h2>
+    <div class="cards-container">
+        {
+            cards.map((card) => (
+                <div class="card">
+                    <img
+                        src={card.img}
+                        srcset={`${card.img} 400w, ${card.img} 750w,${card.imgdesktop} 1440w`}
+                        alt={card.alt}
+                    />
+                    <span>{card.title}</span>
+                </div>
+            ))
+        }
+        <button>See all</button>
+    </div>
+</section>
